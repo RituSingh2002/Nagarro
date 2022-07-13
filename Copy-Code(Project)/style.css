@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+.one,.two,.three{
+    text-align: center;
+}
+.three{
+    margin-top: 20px;
+}
