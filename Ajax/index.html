@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritu Portfolio</title>
+    <style>
+        
+        #username{
+            background-color: aqua;
+            border-radius: 2px red;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajax Form</h1>
+    <div class="form">
+   <ul id="form-message" >
+    <label for="username">UserName</label>
+    
+    <input type="text" id="username" spellcheck="false">
+  <label for="password"> password</label>
+  <input type="password" id="password" spellcheck="false">
+  <button type="submit" id="btn-submit">Login</button>
+
+   </ul>
+    </div>
+    <script>
+        const form={
+            username:document.getElementById('username'),
+            password:document.getElementById('password'),
+            submit:document.getElementById('btn-submit'),
+             message:document.getElementById('form-message'),
+        
+
+        };
+        form.submit.addEventListener('click',()=>{
+            const request=new XMLHttpRequest();
+            request.onload=()=>{
+                let responseObject=null;
+                try{
+                    responseObject=JSON.parse(request.responseText);
+                }
+                catch(e){
+                    console.error('failed');
+                }
+                if(responseObject){
+                    handleResponse(responseObject);
+                }
+
+            };
+            
+        })
+    </script>
+</body>
+</html>

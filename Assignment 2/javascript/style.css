@@ -1,0 +1,12 @@
+ button{
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+    border: 10px solid;
+    border-radius: 10px;
+    padding: 3 px 10 px;
+    background: yellow;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    
+ }
