@@ -1,12 +1,27 @@
 #box{
-    background-color: bisque;
+    background-color: blueviolet;
     height: 300px;
     width: 700px;
     visibility: hidden;
+    border-radius: 5px;
+      box-shadow: 5px 5px 5px pink;
 }
 body{
     background-color: aqua;
 }
 #box.show{
-visibility: visible;
+visibility: inherit;
 }
+button{
+     background-color: rgb(45, 239, 11);
+}
+button:hover{
+   background-color:  coral;
+}
+.fa fa-times{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+       
+}
+ 
