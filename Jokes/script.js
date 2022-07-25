@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 import http from 'http';
 import fs from 'fs';
  
-
+ 
 const PORT=3000; 
 
 fs.readFile('./index.html', function (err, html) {
@@ -56,6 +56,17 @@ async function getJokes(){
     
      
 }
+
+function fetchFromDb(id){
+   //console.log(alljokes.find()) 
+   alljokes.findOne({id:id}).then(data=>{
+    console.log(data.joke)
+   });
+   //console.log(data)
+
+}
+fetchFromDb(2);
+export default fetchFromDb;
  
 
-getJokes();
+ 
