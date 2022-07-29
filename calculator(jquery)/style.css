@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.calc{
+    width: 324px;
+    margin: 75px;
+    border: none;
+    background-color: darkorange;
+    padding: 20px;
+    border-radius: 8px;
+    
+    margin-left: 40vw;
+}
+.calc-display{
+    width: 100%;
+    height: 75px;
+    border: none;
+    background-color: antiquewhite;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+input[type=button]{
+    width: 75px;
+    height: 75px;
+    margin: 2px;
+    color:tomato;
+    border: none;
+    border-radius: 8px;
+
+}
+input[type=button]:hover{
+    background-color: cornsilk;
+}
