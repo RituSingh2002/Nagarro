@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe payment gateway</title>
+    <script src="https://js.stripe.com/v3/"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1><%=title%></h1>
+    <button>Checkout</button>
+    <script>
+        const button=document.querySelector("button");
+        button.addEventListener("click",()=>{
+            $.ajax({
+                url:`http://localhost:4000/create-checkout-session`,
+                type:'POST',
+                contentType:'application/json',
+                data:JSON.stringify({quantity:1}),
+                success:function(data,textStatus,xhr){
+                    var stripe=Stripe('pk_test_51JFFYcSCiiQx5GC6OCfpq4Q5h8lnnfyPQchRi0Z6tI9xSuK4RJ7HthK3CmqoB1qDOFtQvo57mfG90Z93ttG4XzDH00TBK9vFW3');
+                    return stripe.redirectToCheckout({sessionId:data.id});
+                }
+            })
+        })
+    </script>
+</body>
+</html>
