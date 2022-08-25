@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:  papayawhip;
+    display: grid;
+    place-items: center;
+}
+
+.developer-name{
+    margin-top: 30px;
+    font-size: 30px;
+    opacity: 0.3;
+}
+
+#fact{
+    display: none;
+}
+h1{
+    color: #5c0bb9;
+    z-index: 1;
+   
+}
+
+.row{
+    margin-top: 15%;
+    background: violet;
+    width: 50vw;
+    height: max-content;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #a8dadc;
+}
+#header{
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+#instruction{
+    margin-left: 6%;
+    font-size: 20px;
+}
+#fact{
+    margin-left: 3%;
+    font-weight: bolder;
+    size: 400px;
+    font-size: 30px;
+}
+#box{
+    display: grid;
+    place-items: center;
+    margin-top: 3%;
+}
+input[type=number]{
+    background: transparent;
+    width: 70%;
+    height: 150%;
+}
+#fact{
+    margin-top: 4%;
+}
+#factText{
+    margin-top: 2%;
+}
